@@ -1,5 +1,6 @@
 # RICE IMAGE CLASSIFICATION USING MACHINE LEARNING
-![sack-rice-with-rice-wooden-spoon-rice-plant](https://github.com/user-attachments/assets/efc0aefe-0ffc-48c3-86fe-c41b54060657)
+![uncooked-organic-risotto-rice](https://github.com/user-attachments/assets/b6938377-af49-451b-bd83-61c094647217)
+
 
 ## Project overview
 The Rice Image Classification project aims to develop a robust and efficient machine learning model to classify different types of rice grains based on their images. The primary goal is to automate the process of rice type identification, which is crucial for quality control, inventory management, and consumer information in the rice industry.
