@@ -1,16 +1,8 @@
-os
 numpy
-matplotlib
- PIL 
-tensorflow 
-datetime
-cv2
 pandas
-skimage
-scipy.stats 
-seaborn
-sklearn
-itertools
+tensorflow
+scikit-learn
+opencv-python
+pillow
+scipy
 pickle
-pillow 
-jupyter
