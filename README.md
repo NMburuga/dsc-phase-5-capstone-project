@@ -67,8 +67,30 @@ n. Class: The label or category assigned to each rice grain image, indicating th
 7. Conclusion
 8. Recommendation
 
-# **Model results**
-Out of the 3 models used, 
+# **Model evaluation**
+Of the 3 models evaluated, ResNet50V2 tuned model had the best scores at a validation accuracy of 0.988 and test loss 0.03. This means that:
+
+- Validation accuracy 0.988: 98.8% of the time, the model correctly classified the images in the validation dataset. A high validation accuracy suggests that the model has learned the distinguishing features of the rice varieties effectively.
+- Test Loss of 0.03: The model had a loss value of 0.03 on the test set. Loss is a measure of the error in the model's predictions; a lower loss indicates better performance. A test loss of 0.03 is quite low, suggesting that the model makes very few errors on the test data.
+
+# Deployment
+The deployed model can be accesssed at https://mybinder.org/v2/gh/KirigoY/dsc-phase-5-capstone-project.git/HEAD
+
+
+# **Conclusion**
+**Limitations**
+1. The dataset could have had more rice categories
+2. 
+
+
+# **Recommendations**
+1. Scaleability: The dataset could be enhanced with additional rice grain variants in future to cater for other varieties like Bomba, Calasparra, Valencia etc currently not 
+   classified.
+2. Intergration with other systems: Integrate the classification system with existing agricultural or inventory management systems for broader application.
+3. Incremental Learning: Implement incremental learning to update the model with new data without retraining from scratch.
+
+
+
 
 
 
