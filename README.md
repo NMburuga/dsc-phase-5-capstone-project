@@ -3,7 +3,7 @@ RICE IMAGE CLASSIFICATION BASED ON DEEP LEARNING
 !![image](https://github.com/user-attachments/assets/2cc73418-d147-496e-bcb5-b3e953636658)
 
                                    Authors: 
-Jane Martha: Yvonne Mwangi, Bethuel Maruru, Loise Mburuga, Jane Martha,Sonia Ojay,Faith Mwenda 
+Jane Martha,Yvonne Mwangi, Bethuel Maruru, Loise Mburuga,Sonia Ojay,Faith Mwenda 
 
 
 
