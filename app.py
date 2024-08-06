@@ -1,37 +1,29 @@
 import streamlit as st
-import numpy as np
 from PIL import Image
 import pickle
-
+import numpy as np
 # Load the pickled model
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# Function to preprocess the image and make predictions
-def predict(image, model):
-    # Preprocess the image to the format the model expects
-    image = image.resize((128, 128))  # Adjust size as needed
-    image = np.array(image)
-    image = image / 255.0  # Normalize to [0, 1] range if necessary
-    image = image.reshape((1, 128, 128, 3))  # Reshape to (1, 128, 128, 3)
-    
-    # Make a prediction
-    prediction = model.predict(image)
-    return prediction
+st.title('Rice Image Classification')
 
-# Streamlit app
-st.title("Image Classifier")
-
-uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg"])
+uploaded_file = st.file_uploader("Choose an image...", type="jpg")
 
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
-    st.write("Classifying...")
+    st.write("Classifying the image")
 
-    try:
-        prediction = predict(image, model)
-        st.write(f'Prediction: {prediction[0]}')
-    except Exception as e:
-        st.write(f"Error: {e}")
+    # Preprocess the image to match the model's expected input
+    image = image.resize((128, 128))  # Resize to the size your model expects
+    image = np.array(image) / 255.0  # Normalize the image
+    image = image.reshape((1, 128, 128, 3))  # Reshape to add batch dimension
+
+    # Make prediction
+    prediction = model.predict(image)
+    class_names = ['Arborio', 'Basmati', 'Ipsala', 'Jasmine', 'Karacadag']  # Replace with your actual class names
+    predicted_class = class_names[np.argmax(prediction)]
+
+    st.write(f'Predicted class: {predicted_class}')
