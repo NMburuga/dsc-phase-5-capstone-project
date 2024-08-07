@@ -43,7 +43,13 @@ if uploaded_file is not None:
 
     # Make prediction
     prediction = model.predict(image)
-    class_names = ['Arborio', 'Basmati', 'Ipsala', 'Jasmine', 'Karacadag']  # Replace with your actual class names
+    class_names = ['Arborio',
+                   'Basmati', 
+                   'Ipsala: Ipsala Rice
+Ipsala Rice is grown in the Ipsala Plain, one of the most fertile rice fields in Turkey. This type of rice is known for its large grains and flavor. It is especially preferred for making pilaf and stands out with its ability to remain grainy during cooking.', 
+                   'Jasmine',
+                   'Karacadag']  
+    
     predicted_class = class_names[np.argmax(prediction)]
 
     st.write(f'Predicted class: {predicted_class}')
