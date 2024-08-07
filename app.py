@@ -20,7 +20,7 @@ def add_background_image(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # Add your background image from the local file in the repo
-add_background_image('young-rice growing-paddy-file')
+add_background_image('rice-farmer.jpeg')
 
 # Load the pickled model
 with open('model.pkl', 'rb') as f:
