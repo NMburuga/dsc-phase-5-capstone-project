@@ -48,7 +48,15 @@ if uploaded_file is not None:
 
     st.write(f'Predicted class: {predicted_class}')
     
-    # Conditional message for Ipsala rice
+  # Conditional messages for each rice type
     if predicted_class == 'Ipsala':
         st.write("Ipsala Rice is grown in the Ipsala Plain, one of the most fertile rice fields in Turkey. This type of rice is known for its large grains and flavor. It is especially preferred for making pilaf and stands out with its ability to remain grainy during cooking.")
+    elif predicted_class == 'Jasmine':
+        st.write("Jasmine Rice is an aromatic type of rice widely used especially in Thai cuisine. It attracts attention with its long grains and distinctive fragrance. It is known for its soft and light texture when cooked.")
+    elif predicted_class == 'Basmati':
+        st.write("Basmati Rice is known for its long and fine grains. This rice, which is widely used especially in Indian and Middle Eastern cuisine, attracts attention with its pleasant smell and light structure. It is frequently preferred in pilafs with its grains that elongate when cooked.")
+    elif predicted_class == 'Arborio':
+        st.write("Arborio Rice is a short-grain rice named after Arborio in Italy's Po Valley. Known for its high amylopectin content, it has a creamy texture ideal for risotto. The grains are short, fat, and roundish. When cooked, Arborio rice absorbs liquids well, making it perfect for creamy dishes like risotto and rice pudding. It’s sautéed in butter or oil before adding broth to achieve its signature texture. Nutritionally, it’s a good source of carbohydrates and some protein.")
+    elif predicted_class == 'Karacadag':
+        st.write("Karacadag Rice is a local variety of rice grown in the Karacadag region of Turkey. It is known for its high quality and is often preferred for its unique taste and aroma.")
 
