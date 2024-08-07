@@ -12,7 +12,7 @@ import base64
 
 # Function to add background image
 def add_background_image(image_file):
-    with open(image_file, "rb") as f:
+    with open('model.pkl', "rb") as f:
         data = f.read()
     encoded = base64.b64encode(data).decode()
     css = f"""
