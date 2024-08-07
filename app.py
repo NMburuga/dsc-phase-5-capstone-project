@@ -2,11 +2,30 @@ import streamlit as st
 from PIL import Image
 import pickle
 import numpy as np
+import base64
+
+# Function to add background image from a file
+def add_background_image(image_file):
+    with open(image_file, "rb") as f:
+        data = f.read()
+    encoded = base64.b64encode(data).decode()
+    css = f"""
+    <style>
+    .stApp {{
+        background-image: url(data:image/png;base64,{encoded});
+        background-size: cover;
+    }}
+    </style>
+    """
+    st.markdown(css, unsafe_allow_html=True)
+
+# Add your background image from the local file in the repo
+add_background_image('images/young-rice-growing-paddy-field.jpg')
 
 # Load the pickled model
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
-   
+
 st.title('Rice Image Classification')
 
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
