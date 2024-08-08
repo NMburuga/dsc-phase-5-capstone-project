@@ -20,7 +20,7 @@ def add_background_image(image_file):
     st.markdown(css, unsafe_allow_html=True)
 
 # Add your background image from the local file in the repo
-add_background_image('rice_grain.jpeg')
+add_background_image('gree-rice-field-with-blue-sky-clouds.jpg')
 
 # Load the pickled model
 with open('model.pkl', 'rb') as f:
@@ -58,6 +58,5 @@ if uploaded_file is not None:
     elif predicted_class == 'Arborio':
         st.write("Arborio Rice is a short-grain rice named after Arborio in Italy's Po Valley. Known for its high amylopectin content, it has a creamy texture ideal for risotto. The grains are short, fat, and roundish. When cooked, Arborio rice absorbs liquids well, making it perfect for creamy dishes like risotto and rice pudding. It’s sautéed in butter or oil before adding broth to achieve its signature texture. Nutritionally, it’s a good source of carbohydrates and some protein.")
     elif predicted_class == 'Karacadag':
-        st.write("Karacadag Rice is a local variety of rice grown in the Karacadag region of Turkey. It is known for its high quality and is often preferred for its unique taste and aroma.")
- # Display the processed image in a smaller size
-    st.image('image.png', caption='Processed Image.', width=150)  
+        st.write("Karacadag Rice is a local variety of rice grown in the Karacadag region of Turkey. It is cherished for its nutty flavor and slightly chewy consistency, making it ideal for pilafs and other traditional Turkish dishes. The rice has a high nutritional value and is often grown using sustainable agricultural practices, preserving its natural qualities and rich taste. Due to its limited cultivation area, Karacadag rice is considered a specialty product and is highly valued in Turkish cuisine.")
+  
