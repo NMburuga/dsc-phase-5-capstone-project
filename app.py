@@ -59,4 +59,5 @@ if uploaded_file is not None:
         st.write("Arborio Rice is a short-grain rice named after Arborio in Italy's Po Valley. Known for its high amylopectin content, it has a creamy texture ideal for risotto. The grains are short, fat, and roundish. When cooked, Arborio rice absorbs liquids well, making it perfect for creamy dishes like risotto and rice pudding. It’s sautéed in butter or oil before adding broth to achieve its signature texture. Nutritionally, it’s a good source of carbohydrates and some protein.")
     elif predicted_class == 'Karacadag':
         st.write("Karacadag Rice is a local variety of rice grown in the Karacadag region of Turkey. It is known for its high quality and is often preferred for its unique taste and aroma.")
-
+ # Display the processed image in a smaller size
+    st.image('image.png', caption='Processed Image.', width=150)  
